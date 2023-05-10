@@ -1,0 +1,18 @@
+{
+  "locales": {
+    "page": {
+      "home": {
+        "description": "The darkness within me echoes with a haunting refrain, a melody of pain that no light can ever contain.",
+        "notification": {
+          "title": "Here on a professional capacity?",
+          "label": "Check my portfolio now"
+        }
+      },
+      "404": {
+        "title": "Hey! What are you doing here?",
+        "description": "The web page you are looking for does not exist!",
+        "goBack": "Go back"
+      }
+    }
+  }
+}

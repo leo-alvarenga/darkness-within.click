@@ -1,0 +1,18 @@
+{
+  "locales": {
+    "page": {
+      "home": {
+        "description": "The darkness within me echoes with a haunting refrain, a melody of pain that no light can ever contain.",
+        "notification": {
+          "title": "Caiu aqui profissionalmente?",
+          "label": "Cheque meu portfolio"
+        }
+      },
+      "404": {
+        "title": "Ei! O que você está fazendo aqui?",
+        "description": "A página que você está procurando não existe!",
+        "goBack": "Voltar"
+      }
+    }
+  }
+}

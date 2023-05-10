@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.svg-foreground {
+  filter: invert(100%) sepia(25%) saturate(388%) hue-rotate(275deg) brightness(86%) contrast(92%);
+}
