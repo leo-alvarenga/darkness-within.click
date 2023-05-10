@@ -17,5 +17,8 @@ npm install
 mkdir dist
 
 npm run build
+mkdir ./build/public
+
+mv ./build/*.png ./build/public/
 
 scp -r build/* "root@$TARGET:/var/www/darkness-within/"
