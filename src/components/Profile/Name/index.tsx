@@ -8,7 +8,7 @@ function Name() {
       .map((s, index) => (
           <span
             style={{
-              animationDelay: `calc(200ms * ${index + 1})`
+              animationDelay: `calc(200ms * ${index + 1})`,
             }}
             className={
               'relative inline-block animate-fliping'
@@ -22,7 +22,7 @@ function Name() {
   , []);
 
   return (
-    <h1 className="relative text-4xl uppercase">
+    <h1 className="relative text-4xl uppercase max-md:text-lg">
       {content.map((c) => c)}
     </h1>
   );
