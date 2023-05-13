@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 import LanguageSwitch from "./LanguageSwitch";
 import FloatingArea from "./FloatingArea";
 import LinkArea from "./LinkArea";
-import { NotificationDataType } from "./FloatingArea/Notification";
+import { NotificationDataType } from "../../types";
 
 export interface PageProps {
   children?: ReactNode;

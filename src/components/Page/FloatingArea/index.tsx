@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
-import Notification, { NotificationDataType } from "./Notification";
+import Notification from "./Notification";
+import { NotificationDataType } from "../../../types";
 
 export interface FloatingAreaProps {
   notifications?: NotificationDataType[];
