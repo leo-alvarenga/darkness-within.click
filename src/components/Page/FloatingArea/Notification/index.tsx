@@ -1,16 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-export interface NotificationDataType {
-  title: string;
-  icon?: string;
-  body?: string;
-  alwaysShow?: boolean;
-  redirect?: {
-    to: string;
-    label: string;
-  };
-}
+import { NotificationDataType } from "../../../../types";
 
 // TODO:
 // popup animation
