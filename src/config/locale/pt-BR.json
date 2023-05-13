@@ -2,10 +2,37 @@
   "locales": {
     "page": {
       "home": {
+        "title": "Início",
         "description": "A escuridão em mim ecoa em um refrão assombroso, uma bela melodia de dor que luz alguma virá a conter.",
         "notification": {
           "title": "Caiu aqui profissionalmente?",
           "label": "Cheque meu portfolio"
+        }
+      },
+      "tools": {
+        "title": "Ferramentas",
+
+        "chmod": {
+          "title": "Calculadora Chmod",
+          "description": "Calcule de forma simples as permissões para usar no chmod do Unix",
+          "numeric": "Valor numérico",
+          "symbolic": "Representação simbólica",
+          "read": "Ler",
+          "write": "Escrever",
+          "execute": "Executar",
+          "owner": "Dono",
+          "group": "Grupo",
+          "public": "Público",
+
+          "permissions": {
+            "title": "Permissões",
+            "description": "Em sistemas Unix systems, as permissões de arquivos são gerenciadas através de três (3) classes/abstrações distintas, o usuário ou dono, o grupo e o público. Cada uma dessas classes pode possuir permissões de leitura, escrita e/ou execução e, para representar essas permissões, podemos usar a representação numérica ou simbólica."
+          },
+
+          "usage": {
+            "title": "Como usar",
+            "description": "Marque as caixas para dar permissões a cada uma das classes. Cada linha representa uma permissão, ao passo que cada coluna representa uma classe. Após marcar todas as permissões desejadas, clique sobre a representação que preferir para copiá-la."
+          }
         }
       },
       "404": {
@@ -13,6 +40,9 @@
         "description": "A página que você está procurando não existe!",
         "goBack": "Voltar"
       }
+    },
+    "shared": {
+      "seeMore": "Veja mais"
     }
   }
 }

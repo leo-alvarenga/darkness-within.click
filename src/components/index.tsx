@@ -1,5 +1,5 @@
-import { lazy } from "react";
-
-export const Tooltip = lazy(() => import("./Tooltip"));
-export const Page = lazy(() => import("./Page"));
-export const Profile = lazy(() => import("./Profile"));
+export { default as Page } from "./Page";
+export { default as Profile } from "./Profile";
+export { default as Switch } from "./Switch";
+export { default as Tooltip } from "./Tooltip";
+export { default as ToolList } from "./ToolList";

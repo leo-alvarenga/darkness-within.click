@@ -2,10 +2,37 @@
   "locales": {
     "page": {
       "home": {
+        "title": "Home",
         "description": "The darkness within me echoes with a haunting refrain, a melody of pain that no light can ever contain.",
         "notification": {
           "title": "Here on a professional capacity?",
           "label": "Check my portfolio now"
+        }
+      },
+      "tools": {
+        "title": "Tools",
+
+        "chmod": {
+          "title": "Chmod Calculator",
+          "description": "A dead simple calculator for Unix chmod permissions",
+          "numeric": "Numeric value",
+          "symbolic": "Symbolic representation",
+          "read": "Read",
+          "write": "Write",
+          "execute": "Execute",
+          "owner": "Owner",
+          "group": "Group",
+          "public": "Public",
+
+          "permissions": {
+            "title": "Permissions",
+            "description": "In Unix systems, file permissions are managed through three (3) distinct classes/abstractions, the user or owner, the group and public. Each one of these can have read, write and/or execute permissions and, to represent those permissions, we can use a numeric or symbolic representation."
+          },
+
+          "usage": {
+            "title": "How to use",
+            "description": "Check the boxes to give the permissions to each class. Each row represents a permission and each column represents a class. After checking all the permissions you desire for each class, click on whichever representation you would like to copy it."
+          }
         }
       },
       "404": {
@@ -13,6 +40,9 @@
         "description": "The web page you are looking for does not exist!",
         "goBack": "Go back"
       }
+    },
+    "shared": {
+      "seeMore": "See more"
     }
   }
 }

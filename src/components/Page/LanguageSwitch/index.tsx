@@ -23,7 +23,7 @@ function LanguageSwitch() {
   );
 
   return (
-    <div className="flex flex-row gap-0 items-center w-fit h-fit ml-auto">
+    <div className="flex flex-row gap-0 items-center w-fit h-fit ml-auto overflow-hidden rounded-lg">
       {options.map((lang) => (
         <LangButton
           value={lang}

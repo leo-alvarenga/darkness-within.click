@@ -1,4 +1,5 @@
-import { lazy } from "react";
+export { default as Home } from "./Home";
+export { default as NotFound } from "./404";
+export { default as Tools } from "./Tools";
 
-export const Home = lazy(() => import("./Home"));
-export const NotFound = lazy(() => import("./404"));
+export * from "./Tools";

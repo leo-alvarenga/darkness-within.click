@@ -2,7 +2,7 @@ import { ReactNode, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
 export interface TooltipProps {
-  content: string | ReactNode;
+  content?: string | ReactNode;
   children: ReactNode;
   placement?: "top" | "bottom" | "over";
   background?: string;
@@ -48,15 +48,17 @@ function Tooltip({
           ` before:border-b-4 before:border-b-${background} before:bottom-full`
         );
       case "over":
-        return base.concat(" -top-2 ");
+        return base.concat(" -top-0 ");
     }
   }, []);
 
   return (
     <div className="group relative">
-      <span className={className}>
-        {typeof content === "string" ? t(content) : content}
-      </span>
+      {content && (
+        <span className={className}>
+          {typeof content === "string" ? t(content) : content}
+        </span>
+      )}
 
       {children}
     </div>

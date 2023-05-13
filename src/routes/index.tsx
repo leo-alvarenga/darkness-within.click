@@ -1,14 +1,20 @@
-import { Switch, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 
-import { Home, NotFound } from "../pages";
+import { paths } from "../common";
+import { Chmod, Home, NotFound, Tools } from "../pages";
 
 function Router() {
   return (
     <BrowserRouter>
-      <Switch>
-        <Route path="/" component={Home} exact />
-        <Route path="*" component={NotFound} />
-      </Switch>
+      <Routes>
+        <Route path={paths.HOME} element={<Home />} />
+
+        {/* Tools */}
+        <Route path={paths.TOOLS.root} element={<Tools />} />
+        <Route path={paths.TOOLS.CHMOD} element={<Chmod />} />
+
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </BrowserRouter>
   );
 }

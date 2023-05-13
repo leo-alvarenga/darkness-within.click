@@ -13,15 +13,15 @@ function LangButton({ value, selected, onClick }: LangButtonProps) {
   );
 
   const className = useMemo(() => {
-    let base = "px-2 py-1 hover:-translate-y-1 hover:scale-110 transition-all ";
+    let base = "px-2 py-1 transition-all ";
 
     if (selected)
       return base.concat(
-        "text-background bg-red-500 hover:bg-red-500 active:green3"
+        "text-background bg-red-500 hover:bg-red-500 active:bg-red-500"
       );
 
     return base.concat(
-      "text-background bg-foreground hover:bg-red-500 active:bg-red-500"
+      "text-background bg-foreground hover:bg-red-300 active:bg-red-300"
     );
   }, [selected]);
 
