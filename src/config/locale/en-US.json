@@ -36,6 +36,7 @@
         }
       },
       "404": {
+        "alt": "Not found",
         "title": "Hey! What are you doing here?",
         "description": "The web page you are looking for does not exist!",
         "goBack": "Go back"

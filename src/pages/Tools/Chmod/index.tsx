@@ -14,7 +14,12 @@ function Chmod() {
   }, []);
 
   return (
-    <Page>
+    <Page
+      info={{
+        title: 'page.tools.chmod.title',
+        path: '/tools/chmod'
+      }}
+    >
       <h1 className='text-4xl max-lg:text-xl font-bold'>{t('page.tools.chmod.title')}</h1>
       <p className='text-xl max-lg:text-md'>{t('page.tools.chmod.description')}</p>
 

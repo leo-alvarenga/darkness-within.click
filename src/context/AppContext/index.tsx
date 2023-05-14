@@ -1,6 +1,10 @@
 import { PropsWithChildren, createContext, useCallback, useContext, useState } from 'react';
 import { PageInfo, defaultValue } from './util';
 import { NotificationDataType } from '../../types';
+import { useTranslation } from 'react-i18next';
+
+// eslint-disable-next-line react-refresh/only-export-components
+export * from './util';
 
 export const AppContext = createContext(defaultValue);
 
@@ -10,10 +14,15 @@ export function useApp() {
 }
 
 function AppProvider({ children }: PropsWithChildren) {
+  const { t } = useTranslation();
   const [value, setValue] = useState(defaultValue);
 
   const setCurrentPage = useCallback(
     (currentPage: PageInfo) => {
+      if (currentPage.title.length > 1) {
+        document.title = `Darkness within - ${t(currentPage.title)}`;
+      }
+
       setValue({
         ...value,
         data: {
@@ -22,7 +31,7 @@ function AppProvider({ children }: PropsWithChildren) {
         },
       });
     },
-    [value],
+    [t, value],
   );
 
   const setNotifications = useCallback(

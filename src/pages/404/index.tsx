@@ -11,7 +11,12 @@ function NotFound() {
   const from = useMemo(() => searchParams.get('from'), [searchParams]);
 
   return (
-    <Page>
+    <Page
+      info={{
+        title: 'page.404.alt',
+        path: '*'
+      }}
+    >
       <h1 className='text-3xl'>{t('page.404.title')}</h1>
       <span className='text-xl'>{t('page.404.description')}</span>
       <a

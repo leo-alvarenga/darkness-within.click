@@ -2,7 +2,12 @@ import { Page, Profile } from '../../components';
 
 function Home() {
   return (
-    <Page>
+    <Page
+      info={{
+        title: 'page.home.title',
+        path: '/'
+      }}
+    >
       <Profile />
     </Page>
   );

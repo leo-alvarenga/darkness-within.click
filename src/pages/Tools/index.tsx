@@ -4,7 +4,12 @@ import { Page, ToolList } from '../../components';
 
 function Tools() {
   return (
-    <Page>
+    <Page
+      info={{
+        title: 'page.tools.title',
+        path: '/tools'
+      }}
+    >
       <ToolList />
     </Page>
   );
