@@ -1,11 +1,10 @@
 import React from 'react';
 
-import { personalSiteNotification } from '../../common';
 import { Page, ToolList } from '../../components';
 
 function Tools() {
   return (
-    <Page notifications={[personalSiteNotification]}>
+    <Page>
       <ToolList />
     </Page>
   );

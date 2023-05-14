@@ -4,6 +4,7 @@ import i18next from './config/i18n';
 
 import { changeLanguage, getLocaleFromLS } from './config/i18n';
 import { useEffect } from 'react';
+import { AppProvider } from './context';
 
 function App() {
   useEffect(() => {
@@ -12,7 +13,9 @@ function App() {
 
   return (
     <I18nextProvider i18n={i18next}>
-      <Router />
+      <AppProvider>
+        <Router />
+      </AppProvider>
     </I18nextProvider>
   );
 }

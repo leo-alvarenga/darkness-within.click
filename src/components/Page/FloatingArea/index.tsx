@@ -1,17 +1,16 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 import Notification from './Notification';
-import { NotificationDataType } from '../../../types';
+import { useApp } from '../../../context';
 
-export interface FloatingAreaProps {
-  notifications?: NotificationDataType[];
-}
+function FloatingArea() {
+  const { data } = useApp();
+  const notifications = useMemo(() => data.notifications, [data]);
 
-function FloatingArea({ notifications }: FloatingAreaProps) {
   const [displayNotifications, setNotificationVisbility] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setNotificationVisbility(!!notifications), 2000);
+    const timer = setTimeout(() => setNotificationVisbility(!!notifications), 1400);
 
     return () => clearTimeout(timer);
   }, [notifications]);
