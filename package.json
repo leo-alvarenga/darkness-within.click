@@ -1,17 +1,18 @@
 {
   "name": "darkness-within.click",
   "private": true,
-  "version": "0.8.0",
+  "version": "0.8.1",
   "homepage": "https://darkness-within.click",
   "type": "module",
   "scripts": {
-    "predeploy": "npm run build",
+    "clear": "rm -rf ./build && rm -rf ./dist && rm -rf ./node_modules",
     "dev": "tailwindcss -w & vite",
     "lint": "eslint src/**/*.{ts,tsx}",
     "lint:fix": "eslint --fix 'src/**/*.{ts,tsx}'",
     "format": "prettier --write 'src/**/*.{ts,tsx}' --config ./.prettierrc",
     "build": "tailwindcss -o build.css --minify && mv build.css ./dist && tsc && vite build && mv dist/* ./build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run clear && npm install && npm run build"
   },
   "dependencies": {
     "i18next": "^22.4.9",
