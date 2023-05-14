@@ -1,8 +1,8 @@
 export const paths = {
-  HOME: "/",
+  HOME: '/',
   TOOLS: {
-    root: "/tools",
-    CHMOD: "/tools/chmod",
+    root: '/tools',
+    CHMOD: '/tools/chmod',
   },
 };
 
@@ -17,12 +17,12 @@ export const availableTools = [
 
 export const pathArray = [
   {
-    name: "page.home.title",
+    name: 'page.home.title',
     path: paths.HOME,
     icon: 'fa-solid fa-house-chimney',
   },
   {
-    name: "page.tools.title",
+    name: 'page.tools.title',
     path: paths.TOOLS.root,
     icon: 'fa-solid fa-toolbox',
   },
@@ -34,5 +34,5 @@ export const personalSiteNotification = {
   redirect: {
     to: 'https://leo-alvarenga.click',
     label: 'page.home.notification.label',
-  }
+  },
 };

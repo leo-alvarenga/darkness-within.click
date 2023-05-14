@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import { personalSiteNotification } from "../../common";
-import { Page, ToolList } from "../../components";
+import { personalSiteNotification } from '../../common';
+import { Page, ToolList } from '../../components';
 
 function Tools() {
   return (
@@ -11,6 +11,6 @@ function Tools() {
   );
 }
 
-export { default as Chmod } from "./Chmod";
+export { default as Chmod } from './Chmod';
 
 export default Tools;

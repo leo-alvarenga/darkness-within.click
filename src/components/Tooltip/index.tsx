@@ -1,10 +1,10 @@
-import { ReactNode, useMemo } from "react";
-import { useTranslation } from "react-i18next";
+import { ReactNode, useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export interface TooltipProps {
   content?: string | ReactNode;
   children: ReactNode;
-  placement?: "top" | "bottom" | "over";
+  placement?: 'top' | 'bottom' | 'over';
   background?: string;
   disableArrow?: boolean;
 }
@@ -12,8 +12,8 @@ export interface TooltipProps {
 function Tooltip({
   content,
   children,
-  placement = "top",
-  background = "background",
+  placement = 'top',
+  background = 'background',
   disableArrow,
 }: TooltipProps) {
   const { t } = useTranslation();
@@ -31,33 +31,31 @@ function Tooltip({
       before:content-[''] `;
 
     switch (placement) {
-      case "top":
-        base = base.concat(" -top-10 ");
+      case 'top':
+        base = base.concat(' -top-10 ');
 
         if (disableArrow) return base;
         return base.concat(
           baseArrow,
-          ` before:border-t-4 before:border-t-${background} before:top-full`
+          ` before:border-t-4 before:border-t-${background} before:top-full`,
         );
-      case "bottom":
-        base = base.concat(" -bottom-10 ");
+      case 'bottom':
+        base = base.concat(' -bottom-10 ');
 
         if (disableArrow) return base;
         return base.concat(
           baseArrow,
-          ` before:border-b-4 before:border-b-${background} before:bottom-full`
+          ` before:border-b-4 before:border-b-${background} before:bottom-full`,
         );
-      case "over":
-        return base.concat(" -top-0 ");
+      case 'over':
+        return base.concat(' -top-0 ');
     }
-  }, []);
+  }, [background, disableArrow, placement]);
 
   return (
-    <div className="group relative">
+    <div className='group relative'>
       {content && (
-        <span className={className}>
-          {typeof content === "string" ? t(content) : content}
-        </span>
+        <span className={className}>{typeof content === 'string' ? t(content) : content}</span>
       )}
 
       {children}

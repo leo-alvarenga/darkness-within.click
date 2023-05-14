@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export interface SwitchProps {
   on: boolean;
@@ -6,13 +6,7 @@ export interface SwitchProps {
 }
 
 function Switch({ on, onChange }: SwitchProps) {
-  return (
-    <input
-      type="checkbox"
-      checked={on}
-      onChange={(e) => onChange(e.target.checked)}
-    />
-  );
+  return <input type='checkbox' checked={on} onChange={(e) => onChange(e.target.checked)} />;
 }
 
 export default Switch;

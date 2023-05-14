@@ -1,7 +1,7 @@
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 
-import { paths } from "../common";
-import { Chmod, Home, NotFound, Tools } from "../pages";
+import { paths } from '../common';
+import { Chmod, Home, NotFound, Tools } from '../pages';
 
 function Router() {
   return (
@@ -13,7 +13,7 @@ function Router() {
         <Route path={paths.TOOLS.root} element={<Tools />} />
         <Route path={paths.TOOLS.CHMOD} element={<Chmod />} />
 
-        <Route path="*" element={<NotFound />} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );

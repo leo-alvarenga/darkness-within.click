@@ -16,7 +16,7 @@ export function numberFromPermissions(read: boolean, write: boolean, execute: bo
 }
 
 export function symRepFromCode(code: string) {
-  switch (code){
+  switch (code) {
     case '1':
       return '--x';
     case '2':
@@ -38,8 +38,8 @@ export function symRepFromCode(code: string) {
 
 export const defaultCodes: Code = {
   numeric: '744',
-  symbolic: 'rwxr--r--'
-}
+  symbolic: 'rwxr--r--',
+};
 
 export const defaultPermissions = [
   [true, true, true],
@@ -47,5 +47,5 @@ export const defaultPermissions = [
   [true, false, false],
 ];
 
-export const targets = ["owner", "group", "public"];
-export const perms = ["read", "write", "execute"];
+export const targets = ['owner', 'group', 'public'];
+export const perms = ['read', 'write', 'execute'];

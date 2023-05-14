@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
-import Notification from "./Notification";
-import { NotificationDataType } from "../../../types";
+import Notification from './Notification';
+import { NotificationDataType } from '../../../types';
 
 export interface FloatingAreaProps {
   notifications?: NotificationDataType[];
@@ -11,16 +11,14 @@ function FloatingArea({ notifications }: FloatingAreaProps) {
   const [displayNotifications, setNotificationVisbility] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(
-      () => setNotificationVisbility(!!notifications),
-      2000,
-    );
+    const timer = setTimeout(() => setNotificationVisbility(!!notifications), 2000);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [notifications]);
 
   return (
-    <span id="corner-area" 
+    <span
+      id='corner-area'
       className={`
         fixed bottom-4 left-3 w-96
         flex flex-col max-xl:pr-6
@@ -29,7 +27,7 @@ function FloatingArea({ notifications }: FloatingAreaProps) {
         z-50
       `}
     >
-      {displayNotifications && notifications?.map((n) => <Notification { ...n } />)}
+      {displayNotifications && notifications?.map((n) => <Notification {...n} />)}
     </span>
   );
 }

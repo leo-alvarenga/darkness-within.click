@@ -1,13 +1,10 @@
-import {
-  Page,
-  Profile,
-} from "../../components";
+import { Page, Profile } from '../../components';
 
-import { personalSiteNotification } from "../../common";
+import { personalSiteNotification } from '../../common';
 
 function Home() {
   return (
-    <Page notifications={[personalSiteNotification]}> 
+    <Page notifications={[personalSiteNotification]}>
       <>
         <Profile />
       </>

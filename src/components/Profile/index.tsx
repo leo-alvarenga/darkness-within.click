@@ -1,25 +1,24 @@
-import { useTranslation } from "react-i18next";
-import ProfilePic from "./ProfilePic";
-import Name from "./Name";
+import { useTranslation } from 'react-i18next';
+import ProfilePic from './ProfilePic';
+import Name from './Name';
 
 function Profile() {
   const { t } = useTranslation();
 
   return (
-    <div className={`
+    <div
+      className={`
         w-full flex flex-row
         items-center max-xl:flex-col
         max-xl:content-center
         p-2 gap-4
       `}
     >
-      <ProfilePic src="../,./../public/bloody.png" />
+      <ProfilePic src='../,./../public/bloody.png' />
 
-      <div className="flex flex-col items-center">
+      <div className='flex flex-col items-center'>
         <Name />
-        <p className="w-full text-center text-lg">
-          {t("page.home.description")}
-        </p>
+        <p className='w-full text-center text-lg'>{t('page.home.description')}</p>
       </div>
     </div>
   );

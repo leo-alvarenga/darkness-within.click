@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useMemo } from 'react';
 
 export interface LangButtonProps {
   value: string;
@@ -7,22 +7,15 @@ export interface LangButtonProps {
 }
 
 function LangButton({ value, selected, onClick }: LangButtonProps) {
-  const label = useMemo(
-    () => value.toLocaleLowerCase().replace(/[-]/gm, " "),
-    [value]
-  );
+  const label = useMemo(() => value.toLocaleLowerCase().replace(/[-]/gm, ' '), [value]);
 
   const className = useMemo(() => {
-    let base = "px-2 py-1 transition-all ";
+    const base = 'px-2 py-1 transition-all ';
 
     if (selected)
-      return base.concat(
-        "text-background bg-red-500 hover:bg-red-500 active:bg-red-500"
-      );
+      return base.concat('text-background bg-red-500 hover:bg-red-500 active:bg-red-500');
 
-    return base.concat(
-      "text-background bg-foreground hover:bg-red-300 active:bg-red-300"
-    );
+    return base.concat('text-background bg-foreground hover:bg-red-300 active:bg-red-300');
   }, [selected]);
 
   return (

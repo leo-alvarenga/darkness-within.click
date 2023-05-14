@@ -1,14 +1,8 @@
-import React, { useCallback, useEffect, useMemo, useState } from "react";
-import { useTranslation } from "react-i18next";
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
-import { Switch } from "../../../components";
-import {
-  defaultPermissions,
-  numberFromPermissions,
-  perms,
-  symRepFromCode,
-  targets,
-} from "./util";
+import { Switch } from '../../../components';
+import { defaultPermissions, numberFromPermissions, perms, symRepFromCode, targets } from './util';
 
 export interface ChmodTableProps {
   onChange: (code: string, sym: string) => void;
@@ -20,15 +14,14 @@ function ChmodTable({ onChange }: ChmodTableProps) {
 
   const handlePermissionChange = useCallback(
     (v: boolean, target: number, perm: number) => {
-      if (perm >= permissions.length || target >= permissions[perm].length)
-        return;
+      if (perm >= permissions.length || target >= permissions[perm].length) return;
 
       const cpy = [...permissions];
       cpy[perm][target] = v;
 
       setPermissions([...cpy]);
     },
-    [permissions]
+    [permissions],
   );
 
   const dataClass = useMemo(
@@ -39,7 +32,7 @@ function ChmodTable({ onChange }: ChmodTableProps) {
         overflow-hidden break-words
         whitespace-normal
       `,
-    []
+    [],
   );
 
   const data = useMemo(
@@ -47,9 +40,7 @@ function ChmodTable({ onChange }: ChmodTableProps) {
       <>
         {perms.map((p, pIndex) => (
           <tr>
-            <td className={`${dataClass} font-bold`}>
-              {t(`page.tools.chmod.${p}`)}
-            </td>
+            <td className={`${dataClass} font-bold`}>{t(`page.tools.chmod.${p}`)}</td>
             {targets.map((t, tIndex) => (
               <td className={dataClass}>
                 <Switch
@@ -62,7 +53,7 @@ function ChmodTable({ onChange }: ChmodTableProps) {
         ))}
       </>
     ),
-    [permissions, t]
+    [dataClass, handlePermissionChange, permissions, t],
   );
 
   useEffect(() => {
@@ -70,8 +61,7 @@ function ChmodTable({ onChange }: ChmodTableProps) {
     const group: boolean[] = permissions[1];
     const pub: boolean[] = permissions[2];
 
-    if (owner.length < 3 || group.length < 3 || pub.length < 3)
-      onChange("000", "---------");
+    if (owner.length < 3 || group.length < 3 || pub.length < 3) onChange('000', '---------');
 
     const code =
       numberFromPermissions(owner[0], owner[1], owner[2]) +
@@ -84,15 +74,15 @@ function ChmodTable({ onChange }: ChmodTableProps) {
       symRepFromCode(code.charAt(2));
 
     onChange(code, sym);
-  }, [permissions]);
+  }, [onChange, permissions]);
 
   return (
-    <table className="text-xl max-lg:text-md cursor-default w-[95%] table-fixed">
+    <table className='text-xl max-lg:text-md cursor-default w-[95%] table-fixed'>
       <tr>
         <th />
-        <th className={dataClass}>{t("page.tools.chmod.owner")}</th>
-        <th className={dataClass}>{t("page.tools.chmod.group")}</th>
-        <th className={dataClass}>{t("page.tools.chmod.public")}</th>
+        <th className={dataClass}>{t('page.tools.chmod.owner')}</th>
+        <th className={dataClass}>{t('page.tools.chmod.group')}</th>
+        <th className={dataClass}>{t('page.tools.chmod.public')}</th>
       </tr>
       {data}
     </table>
