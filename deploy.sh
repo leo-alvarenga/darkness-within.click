@@ -9,14 +9,7 @@ then
     exit 1
 fi
 
-rm -rf build
-rm -rf dist
-
-npm install
-
-mkdir dist
-
-npm run build
+npm run predeploy
 mkdir ./build/public
 
 mv ./build/*.png ./build/public/

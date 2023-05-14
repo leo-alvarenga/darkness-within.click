@@ -5,7 +5,7 @@
   "homepage": "https://darkness-within.click",
   "type": "module",
   "scripts": {
-    "clear": "rm -rf ./build && rm -rf ./dist && rm -rf ./node_modules",
+    "clear": "rm -rf ./build && rm -rf ./dist && rm -rf ./node_modules && mkdir dist",
     "dev": "tailwindcss -w & vite",
     "lint": "eslint src/**/*.{ts,tsx}",
     "lint:fix": "eslint --fix 'src/**/*.{ts,tsx}'",
