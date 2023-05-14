@@ -26,7 +26,7 @@
 
           "permissions": {
             "title": "Permissões",
-            "description": "Em sistemas Unix systems, as permissões de arquivos são gerenciadas através de três (3) classes/abstrações distintas, o usuário ou dono, o grupo e o público. Cada uma dessas classes pode possuir permissões de leitura, escrita e/ou execução e, para representar essas permissões, podemos usar a representação numérica ou simbólica."
+            "description": "Em sistemas Unix, as permissões de arquivos são gerenciadas através de três (3) classes/abstrações distintas, o usuário ou dono, o grupo e o público. Cada uma dessas classes pode possuir permissões de leitura, escrita e/ou execução e, para representar essas permissões, podemos usar a representação numérica ou simbólica."
           },
 
           "usage": {
