@@ -10,9 +10,9 @@ function ToolList({ onSelection }: ToolListProps) {
   const { t } = useTranslation();
 
   return (
-    <li className='flex flex-col w-fit gap-2 list-none m-0 p-0'>
+    <ul className='flex flex-col w-fit gap-2 list-none m-0 p-0'>
       {availableToolsOnWorkspace.map((tool) => (
-        <ul
+        <li
           className={`
           rounded-lg bg-background 
           p-2 flex flex-row gap-2 items-center
@@ -33,9 +33,9 @@ function ToolList({ onSelection }: ToolListProps) {
               }`}
             />
           </Tooltip>
-        </ul>
+        </li>
       ))}
-    </li>
+    </ul>
   );
 }
 
