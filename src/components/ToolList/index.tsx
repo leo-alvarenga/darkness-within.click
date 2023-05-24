@@ -23,7 +23,7 @@ function ToolList() {
           <span className='text-center'>{t(description)}</span>
 
           <span className='bg-black2 p-2 rounded-lg'>
-            {t('shared.seeMore')}
+            {t('common.seeMore')}
             <i
               className={`
                 ml-3 fa-solid text-green3

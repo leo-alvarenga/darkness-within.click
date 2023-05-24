@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}'],
@@ -30,8 +31,10 @@ module.exports = {
       },
 
       animation: {
-        blink: 'blinking 1s linear infinite',
-        fliping: 'flip 3s infinite'
+        blink: 'vanish 2s linear infinite',
+        fliping: 'flip 3s infinite',
+        rotation: 'spin 1s linear infinite',
+        altrotation: 'altspin 0.5s linear infinite'
       },
       keyframes: {
         blinking: {
@@ -42,9 +45,33 @@ module.exports = {
             opacity: '0'
           }
         },
+        vanish: {
+          '0%, 100%': {
+            opacity: '1'
+          },
+          '50%': {
+            opacity: '.5'
+          }
+        },
         flip: {
           '0%, 80%': {
             transform: 'rotateY(360deg)'
+          }
+        },
+        spin: {
+          '0%': {
+            transform: 'rotate(0deg)'
+          },
+          '100%': {
+            transform: 'rotate(360deg)'
+          }
+        },
+        altspin: {
+          '0%': {
+            transform: 'rotate(0deg)'
+          },
+          '100%': {
+            transform: 'rotate(360deg)'
           }
         }
       },

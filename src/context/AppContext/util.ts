@@ -31,6 +31,11 @@ export const defaultValue: AppContextProps = {
           label: 'page.home.notification.label',
         },
       },
+      {
+        title: 'page.tools.workspace.notification.title',
+        icon: 'fa-solid fa-lightbulb',
+        alwaysShow: false,
+      },
     ],
   },
   setCurrentPage: () => null,

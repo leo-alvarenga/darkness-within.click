@@ -1,9 +1,7 @@
-import React, { useCallback, useState } from 'react';
+import { useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-
-import ChmodTable from './ChmodTable';
-import { Page } from '../../../components';
 import { Code, defaultCodes } from './util';
+import ChmodTable from './ChmodTable';
 
 function Chmod() {
   const { t } = useTranslation();
@@ -14,12 +12,7 @@ function Chmod() {
   }, []);
 
   return (
-    <Page
-      info={{
-        title: 'page.tools.chmod.title',
-        path: '/tools/chmod'
-      }}
-    >
+    <>
       <h1 className='text-4xl max-lg:text-xl font-bold'>{t('page.tools.chmod.title')}</h1>
       <p className='text-xl max-lg:text-md'>{t('page.tools.chmod.description')}</p>
 
@@ -41,7 +34,7 @@ function Chmod() {
 
       <section
         id='details'
-        className='bg-background rounded-lg max-w-[70%] p-4 gap-4 max-lg:max-w-full flex flex-col items-center'
+        className='bg-background rounded-lg p-4 gap-4 flex flex-col items-center'
       >
         <div className='bg-black2 p-2 rounded-lg'>
           <h3 className='text-xl font-bold max-lg:text-lg mb-2'>
@@ -56,7 +49,7 @@ function Chmod() {
           <span>{t('page.tools.chmod.permissions.description')}</span>
         </div>
       </section>
-    </Page>
+    </>
   );
 }
 

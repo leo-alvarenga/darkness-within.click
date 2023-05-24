@@ -33,6 +33,18 @@
             "title": "How to use",
             "description": "Check the boxes to give the permissions to each class. Each row represents a permission and each column represents a class. After checking all the permissions you desire for each class, click on whichever representation you would like to copy it."
           }
+        },
+
+        "workspace": {
+          "title": "Workspace",
+          "description": "Use up to three of the available tools at once",
+          "loading1": "Loading data from local storage...",
+          "loading2": "Getting the tools used last time...",
+          "loading3": "Arraging the tools...",
+          "loading4": "Finishing touches on the workspace layout...",
+          "notification": {
+            "title": "Welcome to your workspace!"
+          }
         }
       },
       "404": {
@@ -42,8 +54,17 @@
         "goBack": "Go back"
       }
     },
-    "shared": {
-      "seeMore": "See more"
+    "common": {
+      "seeMore": "See more",
+      "add": "Add",
+      "remove": "Remove",
+      "replace": "Replace",
+      "tools": {
+        "master": "Available on the master panel",
+        "masterOnly": "ONLY available on the master panel",
+        "slave": "Available on the smaller panels",
+        "noSlave": "NOT available on the smaller panels"
+      }
     }
   }
 }

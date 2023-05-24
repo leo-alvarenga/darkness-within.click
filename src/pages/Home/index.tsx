@@ -5,7 +5,7 @@ function Home() {
     <Page
       info={{
         title: 'page.home.title',
-        path: '/'
+        path: '/',
       }}
     >
       <Profile />

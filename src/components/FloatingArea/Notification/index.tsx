@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { NotificationDataType } from '../../../../types';
+import { NotificationDataType } from '../../../types';
 
 // TODO:
 // popup animation
@@ -12,10 +12,10 @@ function Notification({ alwaysShow, title, icon, body, redirect }: NotificationD
   const [show, setShow] = useState(false);
 
   const savePreference = useCallback(
-    (href?: string) => {
+    (mode: 'close' | 'visit', href?: string) => {
       setShow(false);
 
-      if (alwaysShow) return;
+      if (alwaysShow || (mode === 'close' && href)) return;
 
       try {
         localStorage.setItem(title, 'false');
@@ -55,7 +55,7 @@ function Notification({ alwaysShow, title, icon, body, redirect }: NotificationD
               hover:text-red-600
               fa-solid fa-xmark
             `}
-          onClick={() => setShow(false)}
+          onClick={() => savePreference('close', redirect ? redirect.to : undefined)}
         />
       </span>
 
@@ -64,7 +64,7 @@ function Notification({ alwaysShow, title, icon, body, redirect }: NotificationD
       {redirect && (
         <a
           className='bg-red-500 text-black w-fit px-2 rounded-lg ml-auto cursor-pointer'
-          onClick={() => savePreference(redirect.to)}
+          onClick={() => savePreference('visit', redirect.to)}
         >
           {t(redirect.label)}
           <i

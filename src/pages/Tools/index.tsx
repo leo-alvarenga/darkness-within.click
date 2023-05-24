@@ -7,7 +7,7 @@ function Tools() {
     <Page
       info={{
         title: 'page.tools.title',
-        path: '/tools'
+        path: '/tools',
       }}
     >
       <ToolList />
@@ -15,6 +15,7 @@ function Tools() {
   );
 }
 
-export { default as Chmod } from './Chmod';
+export { default as ChmodPage } from './ChmodPage';
+export { default as WorkspacePage } from './WorkspacePage';
 
 export default Tools;

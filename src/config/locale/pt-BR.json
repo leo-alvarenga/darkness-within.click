@@ -33,6 +33,18 @@
             "title": "Como usar",
             "description": "Marque as caixas para dar permissões a cada uma das classes. Cada linha representa uma permissão, ao passo que cada coluna representa uma classe. Após marcar todas as permissões desejadas, clique sobre a representação que preferir para copiá-la."
           }
+        },
+
+        "workspace": {
+          "title": "Area de trabalho",
+          "description": "Utilize ate tres das ferramentas disponiveis de uma so vez",
+          "loading1": "Resgatando dados do armazenamento local...",
+          "loading2": "Obtendo as ferramentas usadas da ultima vez...",
+          "loading3": "Organizando as ferramentas...",
+          "loading4": "Ultimos toques na area de trabalho...",
+          "notification": {
+            "title": "Bem-vindo(a) a sua area de trabalho!"
+          }
         }
       },
       "404": {
@@ -42,8 +54,17 @@
         "goBack": "Voltar"
       }
     },
-    "shared": {
-      "seeMore": "Veja mais"
+    "common": {
+      "seeMore": "Veja mais",
+      "add": "Add",
+      "remove": "Remove",
+      "replace": "Replace",
+      "tools": {
+        "master": "Disponivel no painel principal",
+        "masterOnly": "Disponivel APENAS no painel principal",
+        "slave": "Disponivel nos paineis menores",
+        "noSlave": "NAO disponivel nos paineis menores"
+      }
     }
   }
 }

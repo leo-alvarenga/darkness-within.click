@@ -77,7 +77,7 @@ function ChmodTable({ onChange }: ChmodTableProps) {
   }, [onChange, permissions]);
 
   return (
-    <table className='text-xl max-lg:text-md cursor-default w-[95%] table-fixed'>
+    <table className='text-xl max-lg:text-md cursor-default table-fixed'>
       <tr>
         <th />
         <th className={dataClass}>{t('page.tools.chmod.owner')}</th>

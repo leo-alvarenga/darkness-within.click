@@ -14,7 +14,7 @@ function NotFound() {
     <Page
       info={{
         title: 'page.404.alt',
-        path: '*'
+        path: '*',
       }}
     >
       <h1 className='text-3xl'>{t('page.404.title')}</h1>

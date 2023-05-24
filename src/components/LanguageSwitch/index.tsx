@@ -1,6 +1,6 @@
 import { useCallback, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { supportedLngs, changeLanguage } from '../../../config/i18n';
+import { supportedLngs, changeLanguage } from '../../config/i18n';
 
 import LangButton from './LangButton';
 

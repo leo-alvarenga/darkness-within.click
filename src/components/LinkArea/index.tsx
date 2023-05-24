@@ -3,7 +3,7 @@ import React, { useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
-import { pathArray } from '../../../common';
+import { pathArray } from '../../common';
 
 function LinkArea() {
   const { pathname } = useLocation();
