@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { TOOL_CODENAME, ToolInfo } from '../../../../common';
+import { ToolCode, ToolInfo } from '../../../../common';
 import ToolList from './ToolList';
 import PlacementView from './PlacementView';
 
@@ -8,7 +8,7 @@ export interface ToolMenuProps {
   isChild1Busy?: boolean;
   isChild2Busy?: boolean;
 
-  onChange: (positision: 'master' | 'child1' | 'child2', code?: TOOL_CODENAME) => void;
+  onChange: (positision: 'master' | 'child1' | 'child2', code?: ToolCode) => void;
 }
 
 function ToolMenu(props: ToolMenuProps) {

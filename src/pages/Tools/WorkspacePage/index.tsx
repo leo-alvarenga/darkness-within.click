@@ -1,22 +1,21 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
-
-import { TOOL_CODENAME, WORKSPACE_INFO } from '../../../common';
-import { MasterChildrenPage } from '../../../components';
-import Spinner from './Spinner';
-import { toolMap, WorkspaceData } from './util';
-import ToolMenu from './ToolMenu';
 import dayjs from 'dayjs';
+import { useCallback, useEffect, useState } from 'react';
+
+import { ToolCode } from '../../../common';
+import Spinner from './Spinner';
+import { WorkspaceData } from '../../../types';
+import Workspace from './Workspace';
 
 function WorkspacePage() {
   const [load, setLoad] = useState(false); // change to true!!!!
-  const [menuVisible, setShowMenu] = useState(false);
+  const [menuVisible, setMenuVisible] = useState(false);
 
   const [data, setData] = useState<WorkspaceData>({
     lastAcess: dayjs(new Date()).format(),
   });
 
   const handleToolChange = useCallback(
-    (positision: 'master' | 'child1' | 'child2', code?: TOOL_CODENAME) => {
+    (positision: 'master' | 'child1' | 'child2', code?: ToolCode) => {
       const cpy = data;
 
       switch (positision) {
@@ -43,37 +42,11 @@ function WorkspacePage() {
           break;
       }
 
-      setShowMenu(false);
+      setMenuVisible(false);
       setData({ ...cpy });
     },
     [data],
   );
-
-  const workspace: JSX.Element = useMemo(() => {
-    return (
-      <>
-        <MasterChildrenPage
-          info={{
-            title: WORKSPACE_INFO.name,
-            path: WORKSPACE_INFO.path,
-          }}
-          master={data && data.master ? toolMap[data.master] : undefined}
-          child1={data && data.child1 ? toolMap[data.child1] : undefined}
-          child2={data && data.child2 ? toolMap[data.child2] : undefined}
-          menuContent={
-            <ToolMenu
-              isMasterBusy={!!data?.master}
-              isChild1Busy={!!data?.child1}
-              isChild2Busy={!!data?.child2}
-              onChange={handleToolChange}
-            />
-          }
-          menuVisible={menuVisible}
-          onMenuVisibilityChange={setShowMenu}
-        />
-      </>
-    );
-  }, [data, handleToolChange, menuVisible]);
 
   const saveData = useCallback(() => {
     try {
@@ -100,7 +73,9 @@ function WorkspacePage() {
     return () => clearTimeout(timer);
   }, [saveData]);
 
-  return load ? <Spinner /> : workspace;
+  return load ? <Spinner /> : (
+    <Workspace menuVisible={menuVisible} onChange={handleToolChange} onMenuVisibilityChange={setMenuVisible} { ...data } />
+  );
 }
 
 export default WorkspacePage;

@@ -1,3 +1,5 @@
+import { ToolCode } from "../common";
+
 export interface NotificationDataType {
   title: string;
   icon?: string;
@@ -8,4 +10,17 @@ export interface NotificationDataType {
     to: string;
     label: string;
   };
+}
+
+export interface WorkspaceData {
+  lastAcess: string;
+  master?: ToolCode;
+  child1?: ToolCode;
+  child2?: ToolCode;
+}
+
+export interface ToDoTask {
+  title: string;
+  createdAt: string;
+  finishedAt: string;
 }

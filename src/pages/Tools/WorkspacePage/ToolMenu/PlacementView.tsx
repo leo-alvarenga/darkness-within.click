@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { TOOL_CODENAME, ToolInfo } from '../../../../common';
+import { ToolCode, ToolInfo } from '../../../../common';
 import { Tooltip } from '../../../../components';
 import { useTranslation } from 'react-i18next';
 
@@ -8,7 +8,7 @@ export interface PlacementViewProps {
   isChild1Busy?: boolean;
   isChild2Busy?: boolean;
   selectedApp?: ToolInfo;
-  onChange: (positision: 'master' | 'child1' | 'child2', code?: TOOL_CODENAME) => void;
+  onChange: (positision: 'master' | 'child1' | 'child2', code?: ToolCode) => void;
 }
 
 interface IconsProps {
