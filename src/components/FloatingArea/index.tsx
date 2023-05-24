@@ -9,11 +9,16 @@ function FloatingArea() {
   } = useApp();
 
   const filteredNotifications = useMemo(() => {
-    const path = location.pathname;
+    let path = location.pathname;
+    
+    if (path.includes('/?')) path = path.split('/?')[0];
+    else if (path.charAt(path.length - 1) === '/') path = path.slice(0, path.length - 1);
 
     if (!notifications || notifications.length <= 0) return undefined;
 
-    return notifications.filter(({ exclusiveTo }) => !exclusiveTo || exclusiveTo === path);
+    const n = notifications.filter(({ exclusiveTo }) => !exclusiveTo || exclusiveTo === path);
+
+    return n;
   }, [notifications]);
 
   const [displayNotifications, setNotificationVisbility] = useState(false);

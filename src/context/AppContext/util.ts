@@ -35,6 +35,7 @@ export const defaultValue: AppContextProps = {
         title: 'page.tools.workspace.notification.title',
         icon: 'fa-solid fa-lightbulb',
         alwaysShow: false,
+        exclusiveTo: '/tools/workspace'
       },
     ],
   },
