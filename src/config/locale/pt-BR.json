@@ -56,9 +56,9 @@
     },
     "common": {
       "seeMore": "Veja mais",
-      "add": "Add",
-      "remove": "Remove",
-      "replace": "Replace",
+      "add": "Adicionar",
+      "remove": "Remover",
+      "replace": "Substituir",
       "tools": {
         "master": "Disponivel no painel principal",
         "masterOnly": "Disponivel APENAS no painel principal",
