@@ -40,7 +40,10 @@ function FloatingArea() {
         z-50
       `}
     >
-      {displayNotifications && filteredNotifications?.map((n) => <Notification {...n} />)}
+      {displayNotifications &&
+        filteredNotifications?.map((n, index) => (
+          <Notification key={`notification-${index}-${n.title}`} {...n} />
+        ))}
     </span>
   );
 }
