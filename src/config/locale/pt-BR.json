@@ -36,14 +36,14 @@
         },
 
         "workspace": {
-          "title": "Area de trabalho",
-          "description": "Utilize ate tres das ferramentas disponiveis de uma so vez",
+          "title": "Área de trabalho",
+          "description": "Utilize até três das ferramentas disponivéis de uma so vez",
           "loading1": "Resgatando dados do armazenamento local...",
           "loading2": "Obtendo as ferramentas usadas da ultima vez...",
           "loading3": "Organizando as ferramentas...",
-          "loading4": "Ultimos toques na area de trabalho...",
+          "loading4": "Últimos toques na area de trabalho...",
           "notification": {
-            "title": "Bem-vindo(a) a sua area de trabalho!"
+            "title": "Bem-vindo(a) à sua área de trabalho!"
           }
         }
       },
@@ -60,10 +60,10 @@
       "remove": "Remover",
       "replace": "Substituir",
       "tools": {
-        "master": "Disponivel no painel principal",
-        "masterOnly": "Disponivel APENAS no painel principal",
-        "slave": "Disponivel nos paineis menores",
-        "noSlave": "NAO disponivel nos paineis menores"
+        "master": "Disponível no painel principal",
+        "masterOnly": "Disponível APENAS no painel principal",
+        "slave": "Disponível nos paineís menores",
+        "noSlave": "NÃO disponível nos paineís menores"
       }
     }
   }
