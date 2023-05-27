@@ -1,17 +1,23 @@
-import { ToolCode, WORKSPACE_INFO } from "../../../common";
-import { MasterChildrenPage } from "../../../components";
-import ToolMenu from "./ToolMenu";
-import { toolMap } from "./util";
-import { WorkspaceData } from "../../../types";
+import { ToolCode, WORKSPACE_INFO } from '../../../common';
+import { MasterChildrenPage } from '../../../components';
+import ToolMenu from './ToolMenu';
+import { toolMap } from '../../../common';
+import { WorkspaceData } from '../../../types';
 
 export interface WorkspaceProps extends WorkspaceData {
   menuVisible: boolean;
-  onMenuVisibilityChange: (value: boolean) => void
-  onChange: (positision: "master" | "child1" | "child2", code?: ToolCode ) => void;
+  onMenuVisibilityChange: (value: boolean) => void;
+  onChange: (positision: 'master' | 'child1' | 'child2', code?: ToolCode) => void;
 }
 
-function Workspace({ child1, child2, master, menuVisible, onMenuVisibilityChange, onChange }: WorkspaceProps) {
-  
+function Workspace({
+  child1,
+  child2,
+  master,
+  menuVisible,
+  onMenuVisibilityChange,
+  onChange,
+}: WorkspaceProps) {
   return (
     <MasterChildrenPage
       info={{

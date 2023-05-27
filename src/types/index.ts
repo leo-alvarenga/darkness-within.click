@@ -1,4 +1,4 @@
-import { ToolCode } from "../common";
+import { ToolCode } from '../common';
 
 export interface NotificationDataType {
   title: string;
@@ -21,6 +21,11 @@ export interface WorkspaceData {
 
 export interface ToDoTask {
   title: string;
-  createdAt: string;
-  finishedAt: string;
+  createdIn: string;
+  finishedIn?: string;
+}
+
+export interface ToDoData {
+  title: string;
+  tasks: ToDoTask[];
 }

@@ -73,8 +73,15 @@ function WorkspacePage() {
     return () => clearTimeout(timer);
   }, [saveData]);
 
-  return load ? <Spinner /> : (
-    <Workspace menuVisible={menuVisible} onChange={handleToolChange} onMenuVisibilityChange={setMenuVisible} { ...data } />
+  return load ? (
+    <Spinner />
+  ) : (
+    <Workspace
+      menuVisible={menuVisible}
+      onChange={handleToolChange}
+      onMenuVisibilityChange={setMenuVisible}
+      {...data}
+    />
   );
 }
 

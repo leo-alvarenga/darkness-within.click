@@ -10,7 +10,7 @@ function FloatingArea() {
 
   const filteredNotifications = useMemo(() => {
     let path = location.pathname;
-    
+
     if (path.includes('/?')) path = path.split('/?')[0];
     else if (path.charAt(path.length - 1) === '/') path = path.slice(0, path.length - 1);
 

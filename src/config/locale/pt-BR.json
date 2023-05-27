@@ -35,6 +35,26 @@
           }
         },
 
+        "todo": {
+          "title": "Lista de Tarefas",
+          "description": "Organize de forma simples suas tarefas",
+
+          "new": "Nova Tarefa",
+          "newList": "Nova lista",
+          "edit": "Clique para editar '{{title}}'",
+
+          "usage": {
+            "title": "Como usar",
+            "description": {
+              "1": "Clique no titulo de sua lista ou de uma tarefa para edita-lo",
+              "2": "Adicione tarefas clicando no botao acima",
+              "3": "Remova tarefas clicando no botao de remocao ou deixando o titulo de sua tarefa vazio",
+              "4": "Clique na checkbox de uma tarefa para marca-la como concluida",
+              "more": "Essa ferramenta salva dados no armazenamento local de seu navegador. Limpar seus dados ou acessar a ferramenta a partir de outro navegador vai te impedir de acessar tarefas criadas a partir de outros navegadores"
+            }
+          }
+        },
+
         "workspace": {
           "title": "Area de trabalho",
           "description": "Utilize ate tres das ferramentas disponiveis de uma so vez",
@@ -56,6 +76,7 @@
     },
     "common": {
       "seeMore": "Veja mais",
+      "moreInfo": "Mais informacoes",
       "add": "Adicionar",
       "remove": "Remover",
       "replace": "Substituir",

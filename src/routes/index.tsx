@@ -1,7 +1,9 @@
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 
-import { paths } from '../common';
-import { ChmodPage, Home, NotFound, Tools, WorkspacePage } from '../pages';
+import { availableTools, paths, toolMap } from '../common';
+import { Home, NotFound, Tools } from '../pages';
+import WorkspacePage from '../pages/Tools/WorkspacePage';
+import { Page } from '../components';
 
 function Router() {
   return (
@@ -11,8 +13,28 @@ function Router() {
 
         {/* Tools */}
         <Route path={paths.TOOLS.root} element={<Tools />} />
-        <Route path={paths.TOOLS.CHMOD} element={<ChmodPage />} />
-        <Route path={paths.TOOLS.WORKSPACE} element={<WorkspacePage />} />
+
+        {availableTools.map((t) => {
+          if (t.code === 'workspace') {
+            return <Route path={t.path} element={<WorkspacePage />} />;
+          }
+
+          return (
+            <Route
+              path={t.path}
+              element={
+                <Page
+                  info={{
+                    title: t.name,
+                    path: t.path,
+                  }}
+                >
+                  {toolMap[t.code]}
+                </Page>
+              }
+            />
+          );
+        })}
 
         <Route path='*' element={<NotFound />} />
       </Routes>

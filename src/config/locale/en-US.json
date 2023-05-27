@@ -35,6 +35,26 @@
           }
         },
 
+        "todo": {
+          "title": "ToDo List",
+          "description": "Organize your tasks in a simple way",
+
+          "new": "New task",
+          "newList": "New list",
+          "edit": "Click to edit '{{title}}'",
+
+          "usage": {
+            "title": "How to use",
+            "description": {
+              "1": "Click on a task's or list's title to edit it",
+              "2": "Add tasks by clicking on the button above",
+              "3": "Remove tasks by clicking on the remove button or by leaving a task's title empty",
+              "4": "Click on a task's checkbox to mark it as done",
+              "more": "This tool saves its data on your browser's local storage. Cleaning its data or accessing this tool from another browser will make it impossible to access tasks created from other browsers"
+            }
+          }
+        },
+
         "workspace": {
           "title": "Workspace",
           "description": "Use up to three of the available tools at once",
@@ -56,6 +76,7 @@
     },
     "common": {
       "seeMore": "See more",
+      "moreInfo": "More info",
       "add": "Add",
       "remove": "Remove",
       "replace": "Replace",
