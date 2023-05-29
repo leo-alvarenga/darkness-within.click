@@ -1,17 +1,24 @@
-import { ToolCode, WORKSPACE_INFO } from "../../../common";
-import { MasterChildrenPage } from "../../../components";
-import ToolMenu from "./ToolMenu";
-import { toolMap } from "./util";
-import { WorkspaceData } from "../../../types";
+import React from 'react';
+import { ToolCode, WORKSPACE_INFO } from '../../../common';
+import { MasterChildrenPage } from '../../../components';
+import ToolMenu from './ToolMenu';
+import { toolMap } from '../../../common';
+import { WorkspaceData } from '../../../types';
 
 export interface WorkspaceProps extends WorkspaceData {
   menuVisible: boolean;
-  onMenuVisibilityChange: (value: boolean) => void
-  onChange: (positision: "master" | "child1" | "child2", code?: ToolCode ) => void;
+  onMenuVisibilityChange: (value: boolean) => void;
+  onChange: (positision: 'master' | 'child1' | 'child2', code?: ToolCode) => void;
 }
 
-function Workspace({ child1, child2, master, menuVisible, onMenuVisibilityChange, onChange }: WorkspaceProps) {
-  
+function Workspace({
+  child1,
+  child2,
+  master,
+  menuVisible,
+  onMenuVisibilityChange,
+  onChange,
+}: WorkspaceProps) {
   return (
     <MasterChildrenPage
       info={{
@@ -23,7 +30,7 @@ function Workspace({ child1, child2, master, menuVisible, onMenuVisibilityChange
       child2={child2 ? toolMap[child2] : undefined}
       menuContent={
         <ToolMenu
-          isMasterBusy={!!master}
+          isMasterBusy={master && master !== 'workspace'}
           isChild1Busy={!!child1}
           isChild2Busy={!!child2}
           onChange={onChange}
@@ -35,4 +42,5 @@ function Workspace({ child1, child2, master, menuVisible, onMenuVisibilityChange
   );
 }
 
+export { default as EmptyWorkspace } from './EmptyWorkspace';
 export default Workspace;

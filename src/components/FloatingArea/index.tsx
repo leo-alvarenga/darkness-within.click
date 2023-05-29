@@ -10,13 +10,17 @@ function FloatingArea() {
 
   const filteredNotifications = useMemo(() => {
     let path = location.pathname;
-    
+
     if (path.includes('/?')) path = path.split('/?')[0];
     else if (path.charAt(path.length - 1) === '/') path = path.slice(0, path.length - 1);
 
     if (!notifications || notifications.length <= 0) return undefined;
 
-    const n = notifications.filter(({ exclusiveTo }) => !exclusiveTo || exclusiveTo === path);
+    const parent = path.split('/')[0];
+    const n = notifications.filter(
+      ({ exclusiveTo, recurseFrom }) =>
+        !exclusiveTo || exclusiveTo === path || !recurseFrom || recurseFrom === `/${parent}`,
+    );
 
     return n;
   }, [notifications]);

@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Page, ToolList } from '../../components';
 
 function Tools() {
@@ -14,8 +12,5 @@ function Tools() {
     </Page>
   );
 }
-
-export { default as ChmodPage } from './ChmodPage';
-export { default as WorkspacePage } from './WorkspacePage';
 
 export default Tools;

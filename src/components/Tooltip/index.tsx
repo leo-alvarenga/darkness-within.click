@@ -2,6 +2,7 @@ import { ReactNode, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 
 export interface TooltipProps {
+  className?: string;
   content?: string | ReactNode;
   children: ReactNode;
   placement?: 'top' | 'bottom' | 'over';
@@ -12,6 +13,7 @@ export interface TooltipProps {
 function Tooltip({
   content,
   children,
+  className: c = '',
   placement = 'top',
   background = 'background',
   disableArrow,
@@ -24,7 +26,8 @@ function Tooltip({
       whitespace-nowrap rounded 
       bg-${background} text-foreground 
       px-2 py-1 transition -translate-x-1/2 left-1/2 
-      opacity-0 group-hover:opacity-100 z-50 `;
+      opacity-0 group-hover:opacity-100 
+      group-active:opacity-100 group-focus:opacity-100 z-50 `;
 
     const baseArrow = ` before:absolute before:left-1/2 
       before:-translate-x-1/2 
@@ -53,7 +56,7 @@ function Tooltip({
   }, [background, disableArrow, placement]);
 
   return (
-    <div className='group relative'>
+    <div className={`group relative ${c}`}>
       {content && (
         <span className={className}>{typeof content === 'string' ? t(content) : content}</span>
       )}

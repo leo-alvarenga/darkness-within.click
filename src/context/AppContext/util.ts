@@ -24,18 +24,24 @@ export const defaultValue: AppContextProps = {
     },
     notifications: [
       {
+        title: 'page.tools.workspace.notification.title',
+        icon: 'fa-solid fa-lightbulb',
+        alwaysShow: false,
+        exclusiveTo: '/tools/workspace',
+      },
+      {
+        title: 'page.tools.workspace.notification.more',
+        icon: 'fa-solid fa-hard-drive',
+        alwaysShow: false,
+        recurseFrom: '/tools'
+      },
+      {
         title: 'page.home.notification.title',
         icon: 'fa-solid fa-lightbulb',
         redirect: {
           to: 'https://leo-alvarenga.click',
           label: 'page.home.notification.label',
         },
-      },
-      {
-        title: 'page.tools.workspace.notification.title',
-        icon: 'fa-solid fa-lightbulb',
-        alwaysShow: false,
-        exclusiveTo: '/tools/workspace'
       },
     ],
   },

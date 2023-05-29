@@ -1,6 +1,7 @@
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { ToolInfo, availableToolsOnWorkspace } from '../../../../common';
-import { Tooltip } from '../../../../components';
+import Tooltip from '../../../Tooltip';
 
 export interface ToolListProps {
   onSelection: (tool: ToolInfo) => void;
@@ -23,8 +24,11 @@ function ToolList({ onSelection }: ToolListProps) {
           {tool.icon && <i className={`${tool.icon} text-green3`} />}
           <span>{t(tool.name)}</span>
 
-          <Tooltip content={t(tool.masterOnly ? 'common.tools.masterOnly' : 'common.tools.master')}>
-            <i className='ml-4 fa-solid fa-up-right-and-down-left-from-center' />
+          <Tooltip
+            className='ml-auto'
+            content={t(tool.masterOnly ? 'common.tools.masterOnly' : 'common.tools.master')}
+          >
+            <i className='fa-solid fa-up-right-and-down-left-from-center' />
           </Tooltip>
           <Tooltip content={t(tool.masterOnly ? 'common.tools.noSlave' : 'common.tools.slave')}>
             <i

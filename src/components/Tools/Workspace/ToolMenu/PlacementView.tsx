@@ -1,7 +1,7 @@
-import { useMemo } from 'react';
+import React, { useMemo } from 'react';
 import { ToolCode, ToolInfo } from '../../../../common';
-import { Tooltip } from '../../../../components';
 import { useTranslation } from 'react-i18next';
+import Tooltip from '../../../Tooltip';
 
 export interface PlacementViewProps {
   isMasterBusy?: boolean;

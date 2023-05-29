@@ -5,4 +5,5 @@ import { Chmod } from '../../../components';
 export const toolMap: Record<ToolCode, ReactNode> = {
   chmod: <Chmod />,
   todo: <></>,
+  workspace: null,
 };
