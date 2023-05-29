@@ -58,12 +58,35 @@
         "workspace": {
           "title": "Área de trabalho",
           "description": "Utilize até três das ferramentas disponivéis de uma so vez",
-          "loading1": "Resgatando dados do armazenamento local...",
-          "loading2": "Obtendo as ferramentas usadas da ultima vez...",
-          "loading3": "Organizando as ferramentas...",
-          "loading4": "Últimos toques na area de trabalho...",
+          "loading": {
+            "0": "Carregando área de trabalho...",
+            "1": "Resgatando dados do armazenamento local...",
+            "2": "Obtendo as ferramentas usadas da ultima vez...",
+            "3": "Organizando as ferramentas...",
+            "4": "Últimos toques na area de trabalho..."
+          },
           "notification": {
-            "title": "Bem-vindo(a) à sua área de trabalho!"
+            "title": "Bem-vindo(a) à sua área de trabalho!",
+            "more": "Algumas ferramentas salvam dados no armazenamento local de seu navegador. Limpar os dados de seu dispositivo ou navegador ou acessá-las através de outros dispositivos/navegadores tornarão impossível o acesso a dados criados a partir de outros navegadores"
+          },
+
+          "usage": {
+            "title": "Bem-vindo(a) à sua área de trabalho!",
+            "description": {
+              "1": "1. Clique no ícone de menu localizado no canto superior-esquerdo",
+              "2": {
+                "0": "2. Selecione uma ferramenta",
+                "1": "a. Cheque os ícones a direita do nome da ferramenta para saber como ela pode ser posicionado em sua área de trabalho"
+              },
+              "3": {
+                "0": "3. Selecione uma posição para sua ferramenta",
+                "1": "a. Posições vazias são indicadas pelo ícone de mais (+)",
+                "2": "b. Posições ocupadas podem ser substituidas através do botão 'Substituir'",
+                "3": "c. ... ou esvaziadas através do botão 'Remover'",
+                "4": "d. A área de trabalho favorecerá posicionar tarefas no painel principal quando são removidas dele ou adicionadas a outros paíneis"
+              },
+              "4": "4. Use suas ferramentas e saia clicando no ícone de 'Power' no canto superior-direito ou navegando até outra página"
+            }
           }
         }
       },

@@ -3,10 +3,10 @@ import { Page } from '../../../components';
 import { useTranslation } from 'react-i18next';
 
 const messages = [
-  'page.tools.workspace.loading1',
-  'page.tools.workspace.loading2',
-  'page.tools.workspace.loading3',
-  'page.tools.workspace.loading4',
+  'page.tools.workspace.loading.1',
+  'page.tools.workspace.loading.2',
+  'page.tools.workspace.loading.3',
+  'page.tools.workspace.loading.4',
 ];
 
 function Spinner() {
@@ -26,7 +26,7 @@ function Spinner() {
 
   return (
     <Page info={{ title: '', path: '' }}>
-      <h1>{t('Loading workspace...')}</h1>
+      <h1>{t('page.tools.workspace.loading.0')}</h1>
 
       <h4>{t(currMsg || '...')}</h4>
 

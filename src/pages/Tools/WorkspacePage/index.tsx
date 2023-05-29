@@ -2,16 +2,17 @@ import dayjs from 'dayjs';
 import { useCallback, useEffect, useState } from 'react';
 
 import { ToolCode } from '../../../common';
+import { Workspace } from '../../../components';
 import Spinner from './Spinner';
 import { WorkspaceData } from '../../../types';
-import Workspace from './Workspace';
 
 function WorkspacePage() {
-  const [load, setLoad] = useState(false); // change to true!!!!
+  const [load, setLoad] = useState(true); // change to true!!!!
   const [menuVisible, setMenuVisible] = useState(false);
 
   const [data, setData] = useState<WorkspaceData>({
     lastAcess: dayjs(new Date()).format(),
+    master: 'workspace',
   });
 
   const handleToolChange = useCallback(
@@ -29,6 +30,8 @@ function WorkspacePage() {
             } else if (cpy.child2) {
               cpy.master = cpy.child2;
               cpy.child2 = undefined;
+            } else {
+              cpy.master = 'workspace';
             }
           }
           break;
@@ -61,10 +64,12 @@ function WorkspacePage() {
 
     if (workspace) {
       const parsed = JSON.parse(workspace) as WorkspaceData;
+      if (!parsed.master) parsed.master = 'workspace';
+
       setData(parsed);
     }
 
-    setTimeout(() => setLoad(false), 6000);
+    setTimeout(() => setLoad(false), ((Math.floor(Math.random() * 10) + 2) % 7) * 1000);
   }, []);
 
   useEffect(() => {
