@@ -12,7 +12,12 @@ export interface SelectProps {
 
 function Select({ data, name, value, onChange }: SelectProps) {
   return (
-    <select className="rounded-lg bg-background p-2 text-foreground" name={name} value={value} onChange={(e) => onChange(e.target.value)}>
+    <select
+      className='rounded-lg bg-background p-2 text-foreground'
+      name={name}
+      value={value}
+      onChange={(e) => onChange(e.target.value)}
+    >
       {data.map((d) => {
         let label = '';
         let value = '';

@@ -33,7 +33,7 @@ export const defaultValue: AppContextProps = {
         title: 'page.tools.workspace.notification.more',
         icon: 'fa-solid fa-hard-drive',
         alwaysShow: false,
-        recurseFrom: '/tools'
+        recurseFrom: '/tools',
       },
       {
         title: 'page.home.notification.title',
