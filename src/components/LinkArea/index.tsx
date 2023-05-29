@@ -21,6 +21,7 @@ function LinkArea() {
     <span className='flex flex-row gap-0 rounded-lg overflow-hidden'>
       {pathArray.map(({ icon, name, path }) => (
         <Link
+          key={`link-area-redirect-${name}`}
           className={getClassName(
             path === pathname || (path.length > 1 && pathname.includes(path)),
           )}

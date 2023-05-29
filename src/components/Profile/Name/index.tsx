@@ -5,6 +5,7 @@ function Name() {
     () =>
       Array.from('darkness_within').map((s, index) => (
         <span
+          key={`profile-name-letter-${s}-${index}`}
           style={{
             animationDelay: `calc(200ms * ${index + 1})`,
           }}

@@ -19,7 +19,7 @@ function LangButton({ value, selected, onClick }: LangButtonProps) {
   }, [selected]);
 
   return (
-    <button key={value} className={className} onClick={() => onClick(value)}>
+    <button className={className} onClick={() => onClick(value)}>
       {label}
     </button>
   );
