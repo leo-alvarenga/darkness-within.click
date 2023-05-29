@@ -58,12 +58,35 @@
         "workspace": {
           "title": "Workspace",
           "description": "Use up to three of the available tools at once",
-          "loading1": "Loading data from local storage...",
-          "loading2": "Getting the tools used last time...",
-          "loading3": "Arraging the tools...",
-          "loading4": "Finishing touches on the workspace layout...",
+          "loading": {
+            "0": "Loading workspace...",
+            "1": "Loading data from local storage...",
+            "2": "Getting the tools used last time...",
+            "3": "Arraging the tools...",
+            "4": "Finishing touches on the workspace layout..."
+          },
           "notification": {
-            "title": "Welcome to your workspace!"
+            "title": "Welcome to your workspace!",
+            "more": "Some tools save their data on your browser's local storage. Cleaning your device's or your browser's data or accessing them from other browsers/devices will make it impossible to access data created from other devices/browsers"
+          },
+
+          "usage": {
+            "title": "Welcome to your workspace!",
+            "description": {
+              "1": "1. Click on the menu icon located on top-left corner",
+              "2": {
+                "0": "2. Select a tool",
+                "1": "a. Check the icons to the right of the tool name to see how they can be placed in your workspace"
+              },
+              "3": {
+                "0": "3. Select a position for your tool",
+                "1": "a. Empty positions are indicated with a plus (+) icon",
+                "2": "b. Occupied positions can be replaced clicking the replace button",
+                "3": "c. ... or emptied without adding a tool by clicking the remove button",
+                "4": "d. The workspace will favor placing tools on the main panel when they are removed from it or added to other panels"
+              },
+              "4": "4. Use your tools and quit by clicking on the power button or navigating to a different page"
+            }
           }
         }
       },

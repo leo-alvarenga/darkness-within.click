@@ -1,3 +1,4 @@
+import React from 'react';
 import { ToolCode, WORKSPACE_INFO } from '../../../common';
 import { MasterChildrenPage } from '../../../components';
 import ToolMenu from './ToolMenu';
@@ -29,7 +30,7 @@ function Workspace({
       child2={child2 ? toolMap[child2] : undefined}
       menuContent={
         <ToolMenu
-          isMasterBusy={!!master}
+          isMasterBusy={master && master !== 'workspace'}
           isChild1Busy={!!child1}
           isChild2Busy={!!child2}
           onChange={onChange}
@@ -41,4 +42,5 @@ function Workspace({
   );
 }
 
+export { default as EmptyWorkspace } from './EmptyWorkspace';
 export default Workspace;

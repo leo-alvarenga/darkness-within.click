@@ -1,6 +1,7 @@
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { ToolInfo, availableToolsOnWorkspace } from '../../../../common';
-import { Tooltip } from '../../../../components';
+import Tooltip from '../../../Tooltip';
 
 export interface ToolListProps {
   onSelection: (tool: ToolInfo) => void;

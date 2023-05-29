@@ -16,7 +16,11 @@ function FloatingArea() {
 
     if (!notifications || notifications.length <= 0) return undefined;
 
-    const n = notifications.filter(({ exclusiveTo }) => !exclusiveTo || exclusiveTo === path);
+    const parent = path.split('/')[0];
+    const n = notifications.filter(
+      ({ exclusiveTo, recurseFrom }) =>
+        !exclusiveTo || exclusiveTo === path || !recurseFrom || recurseFrom === `/${parent}`,
+    );
 
     return n;
   }, [notifications]);

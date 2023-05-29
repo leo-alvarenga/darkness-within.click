@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { Chmod, ToDo } from '../components';
+import { Chmod, EmptyWorkspace } from '../components';
 
 import { paths } from '.';
 
@@ -42,11 +42,11 @@ export const TODO_INFO: ToolInfo = {
   code: 'todo',
 };
 
-export const availableTools = [WORKSPACE_INFO, CHMOD_INFO, TODO_INFO];
-export const availableToolsOnWorkspace: ToolInfo[] = [CHMOD_INFO, TODO_INFO];
+export const availableTools = [WORKSPACE_INFO, CHMOD_INFO];
+export const availableToolsOnWorkspace: ToolInfo[] = [CHMOD_INFO];
 
 export const toolMap: Record<ToolCode, ReactNode> = {
   chmod: <Chmod />,
-  todo: <ToDo />,
-  workspace: <></>,
+  todo: null,
+  workspace: <EmptyWorkspace />,
 };

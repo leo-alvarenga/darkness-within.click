@@ -5,6 +5,7 @@ export interface NotificationDataType {
   icon?: string;
   body?: string;
   exclusiveTo?: string;
+  recurseFrom?: string;
   alwaysShow?: boolean;
   redirect?: {
     to: string;

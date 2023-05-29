@@ -7,7 +7,7 @@ import Statusbar from '../Statusbar';
 
 const commonClasses = `
   flex flex-col items-center
-  overflow-x-scroll p-2 gap-2
+  overflow-x-hidden p-2 gap-2
   bg-black2 rounded-lg
 `;
 
@@ -54,7 +54,7 @@ const Master = ({ master, alone }: MasterProps) => (
   <div
     className={`
     ${alone ? 'w-full max-w-full' : 'w-[55%] max-w-[55%]'} 
-    max-lg:w-full max-lg:max-w-full 
+    max-lg:w-full max-lg:max-w-full
     max-h-full ${commonClasses}
   `}
   >
